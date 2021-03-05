@@ -2,9 +2,9 @@
 import $ from 'jquery'
 import './index.less'
 
-import logo from './logo.png'
+// import logo from './bird.jpg'
 
-console.log('logo', logo);
+// console.log('logo', logo);
 
 const Component = () => {
     var $div = $('<div />');
@@ -16,7 +16,9 @@ const Component = () => {
 
 $(document.body).append(Component())
 
+import('./bird.jpg').then(logo => {
+    console.log('logo', logo.default);
+    var $png = $(`<img src=${logo.default}/>`)
 
-var $png = $(`<img src=${logo}/>`)
-
-$(document.body).append($png)
+    $(document.body).append($png)
+})

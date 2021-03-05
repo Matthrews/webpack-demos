@@ -36,5 +36,8 @@
 #### 使用loader处理图片文件
  - url-loader： 当文件大小未超过limit的时候，默认使用base64处理图盘输出dataURL
     - 共支持6个配置项：limit, mimetype, encoding(默认base64), generator(自定义encodeing过程), fallback(兜底loader), esModule(默认ES模块)
+ - 解决入口文件过大的warning
+   - 移除不必要的库：lodash
+   - 懒加载大图片
 
 
