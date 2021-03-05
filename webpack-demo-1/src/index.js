@@ -2,6 +2,10 @@ import _ from 'lodash'
 import $ from 'jquery'
 import './index.less'
 
+import logo from './logo.png'
+
+console.log('logo', logo);
+
 const Component = () => {
     var $div = $('<div />');
 
@@ -11,3 +15,8 @@ const Component = () => {
 }
 
 $(document.body).append(Component())
+
+
+var $png = $(`<img src=${logo}/>`)
+
+$(document.body).append($png)
