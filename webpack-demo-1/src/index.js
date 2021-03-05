@@ -5,7 +5,8 @@ import './index.less'
 const Component = () => {
     var $div = $('<div />');
 
-    $div.html(['Hello', 'World!'], ' ')
+    $div.html(['Hello', 'World!', 'matthew'], ' ')
+
     return $div;
 }
 

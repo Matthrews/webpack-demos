@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-	mode: "production",
+	mode: "development",
 	devtool: "source-map",
 	entry: './src/index.js',
 	output: {
@@ -13,7 +13,8 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
 		compress: true,
-		post: 9000,
+		host: 'localhost',
+		port: 9000,
 	},
 	plugins: [
 		new HtmlWebpackPlugin({ title: 'webpack-demo-1', filename: 'index.html' }),

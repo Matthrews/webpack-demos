@@ -24,5 +24,7 @@
    - development 模式下打包后: `asset bundle-3bdae7b9ad0372a45c69.js 834 KiB`
    - production 模式下打包后: `asset bundle-9232b5bb95400f7ccbe0.js 162 KiB`
 - 使用 HtmlWebpackPlugin 快速生成html并引入打包后的bundle.js
+- 开发模式下配置watch: `webpack --progress --color --watch` 让webpack实时监听变化并编译(得安装`webpack-dev-server`)
+- 配置`webpack-dev-server`: `"webpack serve`并在 webpack.config.js中配置devServer实时监听编译并刷新页面(后者通过socket.io服务实现)
 
 
