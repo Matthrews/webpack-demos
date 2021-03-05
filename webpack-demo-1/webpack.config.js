@@ -44,7 +44,6 @@ module.exports = {
                         loader: 'url-loader',
                         options: {
                             limit: 8192,
-                            outputPath: process.env === 'production' ? 'assets' : '.',
                         }
                     }
                 ]
