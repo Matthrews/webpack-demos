@@ -1,6 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+console.log('NODE_ENV', process.env.NODE_ENV);
 
 module.exports = {
     mode: "production",
@@ -49,7 +50,20 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[path][name].[ext]',
+                            // name: '[path][name].[ext]',
+
+                            // 函数式配置
+                            name(resourcePath, resourceQuery) {
+                                // `resourcePath` - `/absolute/path/to/file.js`
+                                // `resourceQuery` - `?foo=bar`
+                                console.log('file-loader output name', resourcePath, resourceQuery);
+
+                                if (process.env.NODE_ENV === 'development') {
+                                    return '[path][name].[ext]';
+                                }
+
+                                return 'assets/[contenthash].[ext]';
+                            },
                         }
                     }
                 ]

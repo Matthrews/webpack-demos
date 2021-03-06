@@ -40,5 +40,25 @@
    - 移除不必要的库：lodash
    - 懒加载大图片
  - file-loader: 解析通过inport/require引入的文件成为url并把文件资源弹射到dist/build目录
+   - 编译结果如下：`asset src/product.png 3.63 MiB [emitted] [from: src/product.png] [big]`
+   - 查看dom元素图片src为：`http://localhost:9000/src/product.png`
+
+   - 使用函数方式自定义图片解析name以及资源目录
+   ```js
+    // 函数式配置
+    name(resourcePath, resourceQuery) {
+        // `resourcePath` - `/absolute/path/to/file.js`
+        // `resourceQuery` - `?foo=bar`
+        console.log('file-loader output name', resourcePath, resourceQuery);
+
+        if (process.env.NODE_ENV === 'development') {
+            return '[path][name].[ext]';
+        }
+
+        return 'assets/[contenthash].[ext]';
+    }
+   ```
+   - 编译结果如下：`asset assets/65207b55b0e6a18f6bf48d0557d98ca5.png 3.63 MiB [emitted] [from: src/product.png] [big]`
+   - 查看dom元素图片src为：`http://localhost:9000/assets/65207b55b0e6a18f6bf48d0557d98ca5.png`
 
 
