@@ -65,7 +65,8 @@
    - 结果输出：`asset images/assets/65207b55b0e6a18f6bf48d0557d98ca5.png 3.63 MiB [emitted] [from: src/product.png] [big]`
    - 使用postTransformPublicPath可以动态拼接资源路径，一般在CDN场景使用较多
 
- - file-loader补充：当不设置limit的时候，遇到大文件编译之后会生成两个文件，一个是入口js文件，一个是大文件base64编码的js文件，浏览器disable cache之后每次请求大文件很耗时
+ - url-loader 补充：当不设置limit的时候，遇到大文件编译之后会生成两个文件，一个是入口js文件，一个是大文件base64编码的js文件，首次请求大文件很耗时，详情参考：https://github.com/Matthrews/webpack-demos/commit/43703b255a76c2f4493d161542e780b085533271#commitcomment-47929310
+ - 对比file-loader发现file-loader对首屏时间较为友好： https://github.com/Matthrews/webpack-demos/commit/43703b255a76c2f4493d161542e780b085533271#commitcomment-47929686
 
 
 
