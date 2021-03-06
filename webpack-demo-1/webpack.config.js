@@ -8,7 +8,7 @@ module.exports = {
     devtool: "source-map",
     entry: './src/index.js',
     output: {
-        filename: 'bundle-[chunkhash].js',
+        filename: 'bundle.[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
@@ -41,30 +41,31 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg|gif)$/,
                 use: [
-                    // {
-                    //     loader: 'url-loader',
-                    //     options: {
-                    //         limit: 8912,
-                    //     }
-                    // },
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8912,
+                        }
+                    },
                     {
                         loader: 'file-loader',
                         options: {
                             // name: '[path][name].[ext]',
 
-                            // 函数式配置
-                            name(resourcePath, resourceQuery) {
-                                // `resourcePath` - `/absolute/path/to/file.js`
-                                // `resourceQuery` - `?foo=bar`
-                                console.log('file-loader output name', resourcePath, resourceQuery);
+                            // // 函数式配置
+                            // name(resourcePath, resourceQuery) {
+                            //     // `resourcePath` - `/absolute/path/to/file.js`
+                            //     // `resourceQuery` - `?foo=bar`
+                            //     console.log('file-loader output name', resourcePath, resourceQuery);
 
-                                if (process.env.NODE_ENV === 'development') {
-                                    return '[path][name].[ext]';
-                                }
+                            //     if (process.env.NODE_ENV === 'development') {
+                            //         return '[path][name].[ext]';
+                            //     }
 
-                                return 'assets/[contenthash].[ext]';
-                            },
-                            outputPath: 'images',
+                            //     return '[contenthash].[ext]';
+                            // },
+                            publicPath: 'some/path/',
+                            postTransformPublicPath: (p) => `__webpack_public_path__ + ${p}`,
                         }
                     }
                 ]

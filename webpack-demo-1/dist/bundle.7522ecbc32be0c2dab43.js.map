@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpack-demo-1/./src/product.png"],"names":[],"mappings":"0IAAA,QAAe,IAA0B","file":"bundle.7522ecbc32be0c2dab43.js","sourcesContent":["export default __webpack_public_path__ + \"some/path/65207b55b0e6a18f6bf48d0557d98ca5.png\";"],"sourceRoot":""}
