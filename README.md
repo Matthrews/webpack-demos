@@ -65,4 +65,7 @@
    - 结果输出：`asset images/assets/65207b55b0e6a18f6bf48d0557d98ca5.png 3.63 MiB [emitted] [from: src/product.png] [big]`
    - 使用postTransformPublicPath可以动态拼接资源路径，一般在CDN场景使用较多
 
+ - file-loader补充：当不设置limit的时候，遇到大文件编译之后会生成两个文件，一个是入口js文件，一个是大文件base64编码的js文件，浏览器disable cache之后每次请求大文件很耗时
+
+
 

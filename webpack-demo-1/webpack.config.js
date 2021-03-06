@@ -43,31 +43,7 @@ module.exports = {
                 use: [
                     {
                         loader: 'url-loader',
-                        options: {
-                            limit: 8912,
-                        }
                     },
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            // name: '[path][name].[ext]',
-
-                            // // 函数式配置
-                            // name(resourcePath, resourceQuery) {
-                            //     // `resourcePath` - `/absolute/path/to/file.js`
-                            //     // `resourceQuery` - `?foo=bar`
-                            //     console.log('file-loader output name', resourcePath, resourceQuery);
-
-                            //     if (process.env.NODE_ENV === 'development') {
-                            //         return '[path][name].[ext]';
-                            //     }
-
-                            //     return '[contenthash].[ext]';
-                            // },
-                            publicPath: 'some/path/',
-                            postTransformPublicPath: (p) => `__webpack_public_path__ + ${p}`,
-                        }
-                    }
                 ]
             }
         ]
