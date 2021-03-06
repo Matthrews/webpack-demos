@@ -1,0 +1,2 @@
+(self.webpackChunkwebpack_demo_1=self.webpackChunkwebpack_demo_1||[]).push([[98],{98:(e,c,p)=>{"use strict";p.r(c),p.d(c,{default:()=>s});const s=p.p+"src/product.png"}}]);
+//# sourceMappingURL=bundle-259a5ee97c4d906ceaec.js.map
