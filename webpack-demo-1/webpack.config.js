@@ -64,6 +64,7 @@ module.exports = {
 
                                 return 'assets/[contenthash].[ext]';
                             },
+                            outputPath: 'images',
                         }
                     }
                 ]

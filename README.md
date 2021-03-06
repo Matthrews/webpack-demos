@@ -61,4 +61,7 @@
    - 编译结果如下：`asset assets/65207b55b0e6a18f6bf48d0557d98ca5.png 3.63 MiB [emitted] [from: src/product.png] [big]`
    - 查看dom元素图片src为：`http://localhost:9000/assets/65207b55b0e6a18f6bf48d0557d98ca5.png`
 
+   - 使用outputPath自定义目标文件输出路径，如果name里面有路径的话，会产生叠加效果
+   - 结果输出：`asset images/assets/65207b55b0e6a18f6bf48d0557d98ca5.png 3.63 MiB [emitted] [from: src/product.png] [big]`
+
 
