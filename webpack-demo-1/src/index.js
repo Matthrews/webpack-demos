@@ -16,7 +16,7 @@ const Component = () => {
 
 $(document.body).append(Component())
 
-import('./product.png').then(logo => {
+import('./logo.png').then(logo => {
     console.log('logo', logo.default);
     var $png = $(`<img src=${logo.default} style="transform: translate(-40%, -40%) scale(.2)" />`)
 

@@ -68,5 +68,12 @@
  - url-loader 补充：当不设置limit的时候，遇到大文件编译之后会生成两个文件，一个是入口js文件，一个是大文件base64编码的js文件，首次请求大文件很耗时，详情参考：https://github.com/Matthrews/webpack-demos/commit/43703b255a76c2f4493d161542e780b085533271#commitcomment-47929310
  - 对比file-loader发现file-loader对首屏时间较为友好： https://github.com/Matthrews/webpack-demos/commit/43703b255a76c2f4493d161542e780b085533271#commitcomment-47929686
 
+  - url-loader和file-loader总结：
+    - url-loader基于file-loader封装，url-loader内置了file-loader
+    - url-loader工作分两种情况：
+       1.文件大小小于limit参数，url-loader将会把文件转为DataURL；
+       2.文件大小大于limit，url-loader会调用file-loader进行处理，参数也会直接传给file-loader
+    - file-loader可以解析项目中的url引入（不仅限于css），根据我们的配置，将图片拷贝到相应的路径，再根据我们的配置，修改打包后文件引用路径，使之指向正确的文件。
+    - 建议url-loader设置limit以优化性能
 
 

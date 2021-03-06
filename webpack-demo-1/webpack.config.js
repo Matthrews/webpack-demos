@@ -42,7 +42,10 @@ module.exports = {
                 test: /\.(png|jpg|jpeg|gif)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
+                        options: {
+                            limit: 2 * 10 ** 6
+                        }
                     },
                 ]
             }
