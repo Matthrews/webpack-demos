@@ -1,5 +1,6 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 console.log('NODE_ENV', process.env.NODE_ENV);
 
@@ -16,9 +17,35 @@ module.exports = {
         compress: true,
         host: 'localhost',
         port: 9000,
+        hot: true
     },
     plugins: [
-        new HtmlWebpackPlugin({ title: 'webpack-demo-1', filename: 'index.html' }),
+        new HtmlWebpackPlugin({
+            title: 'webpack-demo-1',
+            filename: "index.html",
+        }),
+        new ImageMinimizerPlugin({
+            minimizerOptions: {
+                // Lossless optimization with custom option
+                // Feel free to experiment with options for better result for you
+                plugins: [
+                    "pngquant"
+                    // ['gifsicle', { interlaced: true }],
+                    // ['jpegtran', { progressive: true }],
+                    // ['optipng', { optimizationLevel: 5 }],  // 0-7 默认为3，意味着要进行16次实验取最佳
+                    // [
+                    //     'svgo',
+                    //     {
+                    //         plugins: [
+                    //             {
+                    //                 removeViewBox: false,
+                    //             },
+                    //         ],
+                    //     },
+                    // ],
+                ],
+            },
+        }),
     ],
     module: {
         rules: [
@@ -48,7 +75,7 @@ module.exports = {
                         }
                     },
                 ]
-            }
+            },
         ]
     }
 }

@@ -77,3 +77,24 @@
     - 建议url-loader设置limit以优化性能
 
 
+#### 使用plugin处理图片文件
+
+ - 使用image-minimizer-webpack-plugin进行图片压缩
+ - 使用optipng进行无损压缩，压缩前：3.63MB，压缩后：2.74MB
+ - 使用pngquant进行有损压缩，压缩前：3.63MB，压缩后：1.8MB
+ - 踩坑，安装imagemin-optipng此类的库可能会失败：`Error: Command failed: xxx is not recognized as an internal or external command`,此时使用
+   ```js
+    <!-- 安装dependencies -->
+    npm install --ignore-scripts  
+    <!-- 安装devDependencies -->
+    npm install --only=dev --ignore-scripts
+    <!-- 设置环境变量，后面run buikld使用 -->
+    set NODE_ENV=production
+   ```
+ - 如果在Windows上使用的话，还可能会报错`/node_modules/optipng/vendor/optipng.exe ENOENT`，这时候就得官网下载optipng，然后make(Windows上make要安装MinGW编译器)，最终生成optipng.exe 然后拷贝到报错对应目录
+ - Mac和Linux上就不会有上述问题了
+
+
+
+
+
