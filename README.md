@@ -105,6 +105,7 @@
 
 - webpack5 开始默认不支持 IE
 - 配置`.browserslistrc`
+- 并不完全支持IE，因为 IE 没有 Promise，想要支持需要配置 polyfill
 
 #### 让 Webpack 支持 JSX
 
