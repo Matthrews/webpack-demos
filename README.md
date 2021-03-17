@@ -103,6 +103,9 @@
 
 #### 让 Webpack 支持 IE
 
+- webpack5 开始默认不支持 IE
+- 配置`.browserslistrc`
+
 #### 让 Webpack 支持 JSX
 
 #### 让 Webpack 支持 TS
