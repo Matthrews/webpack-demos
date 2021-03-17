@@ -105,9 +105,12 @@
 
 - webpack5 开始默认不支持 IE
 - 配置`.browserslistrc`
-- 并不完全支持IE，因为 IE 没有 Promise，想要支持需要配置 polyfill
+- 并不完全支持 IE，因为 IE 没有 Promise，想要支持需要配置 polyfill
 
 #### 让 Webpack 支持 JSX
+
+- webpack 本身可以打包 JS，但是我们可以配置 babel-loader 让其使用更高级的功能
+- 过程是 webpack 调用 babel-loader 对 JS 进行打包
 
 #### 让 Webpack 支持 TS
 
