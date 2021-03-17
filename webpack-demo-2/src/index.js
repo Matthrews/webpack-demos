@@ -1,7 +1,7 @@
 import { a } from "./a"; // 直接引入
-const b = import("./b"); // 动态引入，也按需加载
-
 import App from "./App.jsx";
+
+const b = import("./b"); // 动态引入，也按需加载
 
 console.log(App);
 
@@ -13,5 +13,7 @@ const hi = () => {
 };
 
 hi();
+
+const msg = "hello";
 
 console.log("Message", msg);

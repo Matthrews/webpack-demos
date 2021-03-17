@@ -111,6 +111,12 @@
 
 - webpack 本身可以打包 JS，但是我们可以配置 babel-loader 让其使用更高级的功能
 - 过程是 webpack 调用 babel-loader 对 JS 进行打包
+- 使用`@babel/preset-react`支持 jsx
+
+#### 让 Webpack 支持 ESLint
+
+- 配置`.eslintrc`
+- 使用`eslint-webpack-plugin`插件
 
 #### 让 Webpack 支持 TS
 
