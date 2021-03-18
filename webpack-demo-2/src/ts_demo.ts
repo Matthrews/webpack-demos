@@ -1,3 +1,3 @@
-const str: string = "use typescript";
+const str: string = 'use typescript';
 
 export { str };

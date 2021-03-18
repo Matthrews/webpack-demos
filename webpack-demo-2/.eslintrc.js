@@ -17,6 +17,7 @@ module.exports = {
       rules: {
         "@typescript-eslint/object-curly-spacing": [0],
         "import/prefer-default-export": [0],
+        "linebreak-style": [0, "error", "window"],
       },
     },
   ],
