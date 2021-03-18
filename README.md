@@ -120,6 +120,8 @@
 
 #### 让 Webpack 支持 TS
 
+- 配置`@babel/preset-typescript`
+
 #### 让 Webpack 支持 TSX
 
 #### 让 JS 和 TS 支持 @alias
