@@ -129,3 +129,6 @@
 #### 让 JS 和 TS 支持 @alias
 
 #### 让 ESLint 支持 TypeScript
+
+- TSLint 作者不继续维护了，所以我们使用`airbnb-typescript`
+- 配置`.eslintrc`让其使用`airbnb-typescript`处理 ts 语法问题
