@@ -12,7 +12,8 @@ module.exports = {
         admin: './src/admin.js'
     },
     output: {
-        filename: '[name].[chunkhash].js',
+        filename: '[name].[chunkhash:8].js',
+        chunkFilename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
