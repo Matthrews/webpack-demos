@@ -52,7 +52,13 @@ module.exports = {
                     // 这三行的整体意思就是把两种加载方式的来自 node_modules 目录的文件打包为 vendors.xxx.js
                     // 其中 vendors 是第三方的意思
                 },
-            },
+                commons: {
+                    name: 'common',
+                    chunks: 'all',
+                    minSize: 0,
+                    minChunks: 2
+                }
+            }
         },
         moduleIds: 'deterministic',  // 确定性的
         // deterministic option is useful for long term caching, but still results in smaller bundles compared to hashed

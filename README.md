@@ -166,9 +166,13 @@
  - 配置 optimization.splitChunks
  
 #### Webpack 多页面配置
+
  - 使用场景：index.html给前端用,admin.html给后台用
  - 配置entry项
 
 #### 让 Webpack 提取公共模块
+
+ - 配置 optimization.commons
+ - 代码分割级别：runtime, vendor, common, main
 
 #### Webpack 无限多页面配置思路
