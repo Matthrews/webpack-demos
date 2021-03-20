@@ -135,4 +135,5 @@
 
 #### 让 Webpack 支持 SCSS 并支持 import 全局文件
 
-- 支持 SCSS 需要引入响应 loader
+- 支持 SCSS 需要引入响应 sass-loader
+- 支持自动导入全局 scss 需要配置 sass-loader 的配置项
