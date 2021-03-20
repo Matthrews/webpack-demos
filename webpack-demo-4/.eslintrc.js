@@ -19,6 +19,7 @@ module.exports = {
         "import/prefer-default-export": [0],
         "linebreak-style": [0, "error", "window"],
         "@typescript-eslint/quotes": [0], // 单双引号无所谓
+        "no-console": [0]
       },
     },
   ],

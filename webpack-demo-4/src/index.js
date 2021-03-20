@@ -1,13 +1,18 @@
 import "./index.scss";
+import React from "react";
 
 import name from "@/a";
 import {str} from "./ts_demo.ts";
 
 import {Demo} from "./tsx_demo.tsx";
 
-const {b} = import('./b')  // 动态加载, 按需引入
+console.log('React', React)
 
-console.log('import测试', b);
+import('./b').then(({b}) => {
+    console.log('import测试', b);
+}).catch(err => {
+    console.log('import测试', err);
+})
 
 console.log('TS测试', str);
 

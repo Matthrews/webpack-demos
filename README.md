@@ -159,8 +159,12 @@
 
 #### 让 Webpack 单独打包 runtime
 
+ - 配置 optimization.runtimeChunk
+ 
 #### 让 Webpack 单独打包 node 依赖
 
+ - 配置 optimization.splitChunks
+ 
 #### Webpack 多页面配置
 
 #### 让 Webpack 提取公共模块
