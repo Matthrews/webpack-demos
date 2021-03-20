@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpack-demo-4/./src/b.js"],"names":["b"],"mappings":"2JAAA,IAAMA,EAAI","file":"670.js","sourcesContent":["const b = 12;\r\n\r\nexport { b };\r\n"],"sourceRoot":""}

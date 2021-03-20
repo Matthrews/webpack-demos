@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpack-demo-4/./src/shared.js"],"names":["shared"],"mappings":"oJAAA,IAAMA,EAAS","file":"common.e8a9324e.js","sourcesContent":["const shared = \"公共部分\"\r\n\r\n\r\nexport {shared}"],"sourceRoot":""}
