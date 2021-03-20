@@ -125,8 +125,7 @@
 #### 让 Webpack 支持 TSX
 
 #### 让 JS 和 TS 支持 @alias
-
-#### 让 JS 和 TS 支持 @alias
+ - `webpack.config`配置模块解析别名
 
 #### 让 ESLint 支持 TypeScript
 
