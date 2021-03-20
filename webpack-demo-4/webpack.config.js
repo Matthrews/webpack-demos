@@ -7,7 +7,10 @@ console.log('NODE_ENV', process.env.NODE_ENV);
 module.exports = {
     mode: "production",
     devtool: "source-map",
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js',
+        admin: './src/admin.js'
+    },
     output: {
         filename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
@@ -19,10 +22,19 @@ module.exports = {
         port: 9000,
         hot: true
     },
-    plugins: [new ESLintPlugin({extensions: [".js", ".jsx", ".ts", ".tsx"]}), new HtmlWebpackPlugin({
-        title: 'webpack-demo-4',
-        filename: "index.html",
-    }),],
+    plugins: [
+        new ESLintPlugin({extensions: [".js", ".jsx", ".ts", ".tsx"]}),
+        new HtmlWebpackPlugin({
+            title: '前台页面',
+            filename: "index.html",
+            chunks: ['main']
+        }),
+        new HtmlWebpackPlugin({
+            title: '后台页面',
+            filename: 'admin.html',
+            chunks: ['admin']
+        })
+    ],
     resolve: {
         alias: {
             "@": path.join(__dirname, "src/"),
@@ -42,6 +54,8 @@ module.exports = {
                 },
             },
         },
+        moduleIds: 'deterministic',  // 确定性的
+        // deterministic option is useful for long term caching, but still results in smaller bundles compared to hashed
     },
     module: {
         rules: [

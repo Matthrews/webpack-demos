@@ -25,3 +25,5 @@ const hi = () => {
 };
 
 hi();
+
+console.log('欢迎来到前台页面！')
