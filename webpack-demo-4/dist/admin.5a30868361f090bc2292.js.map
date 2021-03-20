@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpack-demo-4/./src/admin.js"],"names":["console","log"],"mappings":"kGAAAA,QAAQC,IAAI,e","file":"admin.5a30868361f090bc2292.js","sourcesContent":["console.log('我是后提管理页面！')"],"sourceRoot":""}
