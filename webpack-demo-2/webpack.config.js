@@ -1,8 +1,15 @@
 const ESLintPlugin = require("eslint-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   mode: "production",
-  plugins: [new ESLintPlugin({ extensions: [".js", ".jsx", ".ts"] })],
+  plugins: [new ESLintPlugin({ extensions: [".js", ".jsx", ".ts", ".tsx"] })],
+  resolve: {
+    alias: {
+      // "@": path.join(__dirname, "src/"), // 最好用绝对路径 或者resolve(__dirname, "./src/")
+      "@": path.resolve(__dirname, "./src/components/"),
+    },
+  },
   module: {
     rules: [
       {

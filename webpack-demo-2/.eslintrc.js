@@ -18,6 +18,7 @@ module.exports = {
         "@typescript-eslint/object-curly-spacing": [0],
         "import/prefer-default-export": [0],
         "linebreak-style": [0, "error", "window"],
+        "@typescript-eslint/quotes": [0], // 单双引号无所谓
       },
     },
   ],
