@@ -12,6 +12,28 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.styl(us)$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                compileType: "icss",
+              },
+            },
+          },
+          {
+            loader: "stylus-loader",
+            options: {
+              stylusOptions: {
+                additionalData: `@import '~@/stylus-export.styl';`,
+              },
+            },
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         use: [
           "style-loader",

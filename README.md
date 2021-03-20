@@ -40,11 +40,11 @@
 #### 使用 loader 处理图片文件
 
 - url-loader： 当文件大小未超过 limit 的时候，默认使用 base64 处理图片输出 dataURL
-  - 共支持 6 个配置项：limit, mimetype, encoding(默认 base64), generator(自定义 encodeing 过程), fallback(兜底 loader), esModule(默认 ES 模块)
+  - 共支持 6 个配置项：limit, mimetype, encoding(默认 base64), generator(自定义 encode 过程), fallback(兜底 loader), esModule(默认 ES 模块)
 - 解决入口文件过大的 warning
   - 移除不必要的库：lodash
   - 懒加载大图片
-- file-loader: 解析通过 inport/require 引入的文件成为 url 并把文件资源弹射到 dist/build 目录
+- file-loader: 解析通过 import/require 引入的文件成为 url 并把文件资源弹射到 dist/build 目录
 
   - 编译结果如下：`asset src/product.png 3.63 MiB [emitted] [from: src/product.png] [big]`
   - 查看 dom 元素图片 src 为：`http://localhost:9000/src/product.png`
@@ -133,7 +133,7 @@
 - TSLint 作者不继续维护了，所以我们使用`airbnb-typescript`
 - 配置`.eslintrc`让其使用`airbnb-typescript`处理 ts 语法问题
 
-#### 让 Webpack 支持 SCSS 并支持 import 全局文件
+#### 让 Webpack 支持 SCSS 并支持自动 import 全局文件
 
 - 支持 SCSS 需要引入响应 sass-loader
 - 支持自动导入全局 scss 需要配置 sass-loader 的配置项
@@ -141,4 +141,12 @@
 #### SCSS 分享变量给 JS
 
 - 使用场景：使用 JS 创建动态 HTML 的时候想要使用 SCSS 里面的一些变量
-- 解决方案：首先在 SCSS 文件里面 export 变量，然后配置 _css-loader_ 配置项
+- 解决方案：首先在 SCSS 文件里面 export 变量，然后配置 **css-loader** 配置项
+
+#### SASS v.s. SCSS v.s. LESS v.s. Stylus
+
+- Ruby 社区首先推出 SASS(没大括号)，后来改为 SCSS(加大括号)
+- Twitter 社区继 Boostrap 之后推出 Less
+- [Stylus](https://stylus.bootcss.com/)
+
+##### 使用 Stylus
