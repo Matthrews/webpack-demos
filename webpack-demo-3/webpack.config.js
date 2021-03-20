@@ -15,7 +15,14 @@ module.exports = {
         test: /\.scss$/,
         use: [
           "style-loader",
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                compileType: "icss", // export是css-loader提供的高级功能，而不是sass-loader提供的
+              },
+            },
+          },
           {
             loader: "sass-loader",
             options: {

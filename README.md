@@ -137,3 +137,8 @@
 
 - 支持 SCSS 需要引入响应 sass-loader
 - 支持自动导入全局 scss 需要配置 sass-loader 的配置项
+
+#### SCSS 分享变量给 JS
+
+- 使用场景：使用 JS 创建动态 HTML 的时候想要使用 SCSS 里面的一些变量
+- 解决方案：首先在 SCSS 文件里面 export 变量，然后配置 _css-loader_ 配置项
