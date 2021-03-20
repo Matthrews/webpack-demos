@@ -125,9 +125,14 @@
 #### 让 Webpack 支持 TSX
 
 #### 让 JS 和 TS 支持 @alias
- - `webpack.config`配置模块解析别名
+
+- `webpack.config`配置模块解析别名
 
 #### 让 ESLint 支持 TypeScript
 
 - TSLint 作者不继续维护了，所以我们使用`airbnb-typescript`
 - 配置`.eslintrc`让其使用`airbnb-typescript`处理 ts 语法问题
+
+#### 让 Webpack 支持 SCSS 并支持 import 全局文件
+
+- 支持 SCSS 需要引入响应 loader
