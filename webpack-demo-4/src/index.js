@@ -31,3 +31,5 @@ const hi = () => {
 hi();
 
 console.log('欢迎来到前台页面！')
+
+document.body.innerHTML = `<h2 style="color: orange">${str}</h2>`

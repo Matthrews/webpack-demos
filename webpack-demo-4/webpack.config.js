@@ -7,6 +7,13 @@ console.log('NODE_ENV', process.env.NODE_ENV);
 module.exports = {
     mode: "production",
     devtool: "source-map",
+    stats: { // 控制台输出日志控制
+        assets: true,
+        colors: true,
+        errors: true,
+        errorDetails: true,
+        hash: true,
+    },
     entry: {
         main: './src/index.js',
         admin: './src/admin.js'
@@ -18,9 +25,11 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
+        https: true, // HTTP2 和 Service Worker 就必须运行在 HTTPS 之上
         compress: true,
-        host: 'localhost',
+        host: '0.0.0.0',
         port: 9000,
+        inline: true,
         hot: true
     },
     plugins: [
