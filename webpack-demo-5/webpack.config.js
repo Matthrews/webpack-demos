@@ -16,6 +16,7 @@ module.exports = {
         chunkFilename: "[name].chunk.js"
     },
     plugins: [
+        // 手动配置内置插件AggressiveMergingPlugin
         new AggressiveMergingPlugin({
         	minSizeReduce: 1.5
         })
