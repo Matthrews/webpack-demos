@@ -1,28 +1,22 @@
-const path = require('path');
-const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
-
 /**
- * 导出一个 Function 的配置
- * @param env
- * @param argv
- * @returns {{devtool: (undefined|string), plugins: []}}
+ * 导出多份配置
+ * Webpack 3.1.0 版本才开始支持
+ * 以上配置会导致 Webpack 针对这三份配置执行三次不同的构建
+ * @type {({}|(function(): {})|(function(): *))[]}
  */
-module.exports = function (env = {}, argv) {
-    const plugins = [];
-
-    const isProduction = env['production'];
-
-    // 在生成环境才压缩
-    if (isProduction) {
-        plugins.push(
-            // 压缩输出的 JS 代码
-            new UglifyJsPlugin()
-        )
+module.exports = [
+    // 采用 Object 描述的一份配置
+    {
+        // ...
+    },
+    // 采用函数描述的一份配置
+    function () {
+        return {
+            // ...
+        }
+    },
+    // 采用异步函数描述的一份配置
+    function () {
+        return Promise();
     }
-
-    return {
-        plugins: plugins,
-        // 在生成环境不输出 Source Map
-        devtool: isProduction ? undefined : 'source-map',
-    };
-}
+]
