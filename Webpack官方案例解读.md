@@ -1,4 +1,17 @@
+---
+date: 2021-04-17
+
+author: matthew
+
+tag: webpack, example
+
+source: https://github.com/webpack/webpack
+
+---
+
 ## Webpack4 官方案例解读
+
+[TOC]
 
 > 注：从 webpack-demo-5 开始为官方案列，官方案列在 webpack/examples 里
 
