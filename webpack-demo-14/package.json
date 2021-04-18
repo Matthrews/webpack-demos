@@ -1,0 +1,26 @@
+{
+  "name": "webpack-demo-14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development -c webpack.config.js",
+    "prod": "webpack --mode production -c webpack.config.js"
+  },
+  "devDependencies": {
+    "webpack": "5.33.2",
+    "webpack-cli": "4.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.10.1",
+    "date-fns": "^2.21.1",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "scorn": "^1.0.0"
+  }
+}

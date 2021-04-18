@@ -1,0 +1,1 @@
+(self.webpackChunkwebpack_demo_9=self.webpackChunkwebpack_demo_9||[]).push([[930],{718:(e,c,k)=>{"use strict";k.r(c),k.d(c,{default:()=>s});const s="foo"}}]);

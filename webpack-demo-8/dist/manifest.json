@@ -1,0 +1,13 @@
+{
+  "name": "vendor_d5a5b2adcc613ffa868a",
+  "content": {
+    "./vendor2.js": {
+      "id": 117,
+      "buildMeta": {}
+    },
+    "./vendor.js": {
+      "id": 965,
+      "buildMeta": {}
+    }
+  }
+}

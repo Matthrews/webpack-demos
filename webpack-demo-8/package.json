@@ -1,0 +1,23 @@
+{
+  "name": "webpack-demo-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development -c webpack.config.js",
+    "prod": "webpack --mode production -c webpack.config.js"
+  },
+  "devDependencies": {
+    "webpack": "5.33.2",
+    "webpack-cli": "4.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

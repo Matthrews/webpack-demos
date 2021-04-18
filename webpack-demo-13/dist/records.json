@@ -1,0 +1,51 @@
+{
+  "aggressiveSplits": [
+    {
+      "hash": "3f9ddf867e644cd488e5f6955df56eb7",
+      "id": 244,
+      "modules": [
+        "./node_modules/acorn/dist/acorn.mjs"
+      ],
+      "size": 194804
+    },
+    {
+      "hash": "9ad9710219e0cf5ca3e3d6449bec6797",
+      "id": 486,
+      "modules": [
+        "./node_modules/lodash/lodash.js"
+      ],
+      "size": 544098
+    }
+  ],
+  "chunks": {
+    "byName": {},
+    "bySource": {
+      "0 main": 244,
+      "1 main": 486,
+      "2 main": 144
+    },
+    "usedIds": [
+      144,
+      244,
+      486
+    ]
+  },
+  "modules": {
+    "byIdentifier": {
+      "./example.js": 144,
+      "./node_modules/acorn/dist/acorn.mjs": 244,
+      "./node_modules/lodash/lodash.js": 486,
+      "./node_modules/object-assign/index.js": 418,
+      "./node_modules/react/cjs/react.production.min.js": 408,
+      "./node_modules/react/index.js": 294
+    },
+    "usedIds": [
+      144,
+      244,
+      294,
+      408,
+      418,
+      486
+    ]
+  }
+}
