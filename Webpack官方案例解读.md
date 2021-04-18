@@ -264,8 +264,8 @@ Webpack 已经内置了对动态链接库的支持，需要通过2个内置的�
 通过这两个内置插件，可以做到拆分 bundles，提升构建速度
 
 3. 使用插件前后打包如图
-![前](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-6/imgs/before.png)
-![后](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-6/imgs/after.png)
+![前](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-8/imgs/before.png)
+![后](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-8/imgs/after.png)
 
 4. `webpack.config.js`配置如下
 ```js
@@ -355,7 +355,7 @@ import("./templates/ba" + createContextVar /* webpackChunkName: "chunk-bar-baz" 
 })
 ```
 
-![打包截图](xxx)
+![打包截图](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-9/imgs/1.png)
 
 源代码 [webpack-demo-9](https://github.com/Matthrews/webpack-demos)
 
@@ -390,10 +390,10 @@ require("bundle-loader?lazy&name=my-chunk!./file.js");
 ```
 
 3. 使用`bundle-loader`前后打包截图
-![bundle-loader](C:\Users\Matthew\webpack-demos\webpack-demo-10\imgs\bundle-loader.png)
+![bundle-loader](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-10/imgs/bundle-loader.png)
 
 貌似作用不明显，而且使用`loader`之后`bundle`文件反而变大了，把`./file.js`换成`react`后很明显
-![bundle-loader_react](C:\Users\Matthew\webpack-demos\webpack-demo-10\imgs\bundle-loader_react.png)
+![bundle-loader_react](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-10/imgs/bundle-loader_react.png)
 
 4. 源代码 [webpack-demo-10](https://github.com/Matthrews/webpack-demos)
 
@@ -433,7 +433,7 @@ getTemplate("baz");
 
 2. 打包截图
 
-![打包截图](C:\Users\Matthew\webpack-demos\webpack-demo-11\imgs\import.png)
+![打包截图](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-11/imgs/import.png)
 
 3. 源代码 [webpack-demo-11](https://github.com/Matthrews/webpack-demos)
 
@@ -470,7 +470,7 @@ console.log(_, React)
 ```
 
 3. 使用external前后打包截图
-![使用external前后打包截图](./imgs/1.png)
+![使用external前后打包截图](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-12/imgs/1.png)
 
 4. 源代码 [webpack-demo-12](https://github.com/Matthrews/webpack-demos)
 
@@ -575,8 +575,10 @@ module.exports = (env = "development") => ({
 
 3. 开发模式和生产模式打包
 试了一下，貌似生产模式默认就有cache优化，但官方说不是默认的
-![开发模式](x)
-![生产模式](y)
+![开发模式](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-14/imgs/dev.png)
+![生产模式](https://github.com/Matthrews/webpack-demos/blob/main/webpack-demo-14/imgs/prod.png)
+
+4. 源代码 [webpack-demo-14](https://github.com/Matthrews/webpack-demos)
 
 ### Side Effects
 
