@@ -1,0 +1,21 @@
+{
+  "name": "webpack-demo-15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "sideEffects": true,
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=debug webpack  --config ./webpack.config.js",
+    "build:pro": "cross-env NODE_ENV=prod webpack  --config ./webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
