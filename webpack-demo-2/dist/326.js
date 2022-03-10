@@ -1,1 +1,0 @@
-(self.webpackChunkwebpack_demo_2=self.webpackChunkwebpack_demo_2||[]).push([[326],{326:function(e,c,n){"use strict";n.r(c),n.d(c,{b:function(){return u}});const u=12}}]);

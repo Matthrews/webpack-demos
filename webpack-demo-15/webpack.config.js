@@ -1,20 +1,13 @@
-var path = require("path");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
 
-module.exports = {
-    entry: "./example.js",
-    output: {
-        path: path.join(__dirname, "dist"),
-        filename: "[name].js",
-        chunkFilename: "[name].js",
-    },
-    optimization: {
-        concatenateModules: true,
-        usedExports: true,
-        providedExports: true,
-        chunkIds: "deterministic"
-    },
-    plugins: [new HtmlWebpackPlugin({
-        template: 'index.html'
-    })]
+module.exports = (env) => {
+  return {
+    mode: "production",
+    entry: "./index.js",
+    plugins: [
+      new webpack.DefinePlugin({
+        DEBUG: process.env.NODE_ENV === "debug",
+      }),
+    ],
+  };
 };
