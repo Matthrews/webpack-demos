@@ -1,0 +1,18 @@
+{
+  "name": "webpack-demo-14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development -c webpack.config.js",
+    "prod": "webpack --mode production -c webpack.config.js"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "5.33.2",
+    "webpack-cli": "4.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -503,7 +503,7 @@ console.log(_, React)
 
 ### Scope Hoisting
 
-[Webpack Scope Hoisting](https://zhuanlan.zhihu.com/p/162066537)
+[Webpack Scope Hoisting](http://webpack.wuhaolin.cn/4%E4%BC%98%E5%8C%96/4-14%E5%BC%80%E5%90%AFScopeHoisting.html)
 
 ### Tree shaking
 1. tree shaking 是一个术语，通常用于描述移除 JavaScript 上下文中的未引用代码(dead-code)。
@@ -512,7 +512,7 @@ console.log(_, React)
 2. 使用 tree shaking，你需要
 - 使用 ES2015 模块语法（即 import 和 export）
 - 处于生产模式
-- 在项目 package.json 文件中，添加一个 "sideEffects" 入口
+- 在项目 package.json 文件中，添加一个 "sideEffects" 入口或者配置`optimization.usedExports`项
 - 引入一个能够删除未引用代码(dead code)的压缩工具(minifier)（例如 UglifyJSPlugin 或者 TerserPlugin）
 
 3. 你可以将应用程序想象成一棵树。绿色表示实际用到的源码和 library，是树上活的树叶。
@@ -580,10 +580,18 @@ module.exports = (env = "development") => ({
 
 4. 源代码 [webpack-demo-14](https://github.com/Matthrews/webpack-demos)
 
+### Module Federation
+
+[webpack/README.md at master · webpack/webpack (github.com)](https://github.com/webpack/webpack/blob/master/examples/module-federation/README.md)
+
+[Module Federation 没有魔法仅仅是异步chunk - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/352936804)
+
+[Webpack 5 Module Federation: JavaScript 架构的变革者 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/120462530)
+
 ### Side Effects
 
 ### Source Map
 
 ### Web Worker
 
-
+源代码 [webpack-demo-15](https://github.com/Matthrews/webpack-demos)

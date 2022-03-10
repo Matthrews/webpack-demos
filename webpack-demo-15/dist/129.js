@@ -1,0 +1,1 @@
+(self.webpackChunkwebpack_demo_14=self.webpackChunkwebpack_demo_14||[]).push([[129],{129:(e,c,k)=>{"use strict";function n(e){return e<1?0:e<=2?1:n(e-1)+n(e-2)}k.r(c),k.d(c,{fibonacci:()=>n})}}]);

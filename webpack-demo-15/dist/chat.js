@@ -1,0 +1,1 @@
+(()=>{"use strict";const s=[];onconnect=function(t){for(const o of t.ports)o.onmessage=t=>{const e=t.data;switch(e.type){case"message":n=e.content,c=e.from,s.length>10&&s.shift(),s.push(`${c}: ${n}`);case"history":o.postMessage({type:"history",history:s})}var n,c}}})();
